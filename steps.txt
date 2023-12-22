@@ -1,0 +1,11 @@
+sudo apt install python3.12-venv
+python3 -m venv /env/tapi
+source  ~/env/tapi/bin/activate
+pip install flask
+pip install unicorn
+
+gunicorn --bind 0.0.0.0:5000 wsgi:app
+
+deactivate
+
+pkill -f gunicorn

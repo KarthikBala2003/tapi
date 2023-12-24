@@ -4,14 +4,24 @@ source  ~/env/tapi/bin/activate
 pip install flask
 pip install unicorn
 
-gunicorn --bind 0.0.0.0:5000 wsgi:app
+gunicorn --bind 0.0.0.0:8282 wsgi:app
 
 deactivate
 
 pkill -f gunicorn
 
-===================== pip commands ===================
+====================================== pip commands ======================================
 pip freeze > requirements.txt
 pip install -r requirements.txt
 
 pip freeze > requirements.txt && awk -F'==' '{print $1}' requirements.txt > requirements_noversions.txt
+
+====================================== NAS Drive Setup commands ======================================
+cd /volume1
+sudo python3.11 -m venv tapi
+chmod 775 tapi
+cd tapi
+sudo chmod -R 775 bin
+source  bin/activate
+
+

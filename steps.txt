@@ -13,3 +13,5 @@ pkill -f gunicorn
 ===================== pip commands ===================
 pip freeze > requirements.txt
 pip install -r requirements.txt
+
+pip freeze > requirements.txt && awk -F'==' '{print $1}' requirements.txt > requirements_noversions.txt

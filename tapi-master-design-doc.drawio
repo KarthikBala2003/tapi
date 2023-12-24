@@ -1,0 +1,67 @@
+<mxfile host="Electron" modified="2023-12-24T18:29:45.101Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.11 Chrome/114.0.5735.289 Electron/25.9.8 Safari/537.36" etag="ln0BmsrnF4r-0KKcQu9s" version="22.1.11" type="device">
+  <diagram name="tapi-app-design" id="-H7DSrYet4RpTsI6fR0e">
+    <mxGraphModel dx="1473" dy="612" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nC6vrzYN03f-8VcYCyRk-1" value="Tesla API&amp;nbsp;&lt;br&gt;(tapi)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#004700;fontColor=#ffffff;strokeColor=#f6f9f6;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="365" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nC6vrzYN03f-8VcYCyRk-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="nC6vrzYN03f-8VcYCyRk-2" target="nC6vrzYN03f-8VcYCyRk-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nC6vrzYN03f-8VcYCyRk-2" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" parent="1" vertex="1">
+          <mxGeometry x="170" y="250" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UATdeYgYkaC6HxrNzLWi-2" value="tapi App" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;labelBorderColor=none;" vertex="1" parent="1">
+          <mxGeometry x="365" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UATdeYgYkaC6HxrNzLWi-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="UATdeYgYkaC6HxrNzLWi-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="425" y="390" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="425" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UATdeYgYkaC6HxrNzLWi-3" value="Landing Page" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#004700;fontColor=#ffffff;strokeColor=none;labelBorderColor=none;" vertex="1" parent="1">
+          <mxGeometry x="360" y="380" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UATdeYgYkaC6HxrNzLWi-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.542;entryY=0.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="425" y="310" as="sourcePoint" />
+            <mxPoint x="425.03999999999996" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UATdeYgYkaC6HxrNzLWi-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="UATdeYgYkaC6HxrNzLWi-5" target="UATdeYgYkaC6HxrNzLWi-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UATdeYgYkaC6HxrNzLWi-11" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="UATdeYgYkaC6HxrNzLWi-10">
+          <mxGeometry x="-0.0147" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UATdeYgYkaC6HxrNzLWi-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UATdeYgYkaC6HxrNzLWi-5" target="UATdeYgYkaC6HxrNzLWi-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UATdeYgYkaC6HxrNzLWi-14" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="UATdeYgYkaC6HxrNzLWi-13">
+          <mxGeometry x="-0.35" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UATdeYgYkaC6HxrNzLWi-5" value="Is authorized user" style="rhombus;whiteSpace=wrap;html=1;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="365" y="470" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="UATdeYgYkaC6HxrNzLWi-9" value="Not authorized - Web page" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#B20000;fillColor=#771208;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="580" y="486.25" width="120" height="37.5" as="geometry" />
+        </mxCell>
+        <mxCell id="UATdeYgYkaC6HxrNzLWi-12" value="Menu Operation Page" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#004700;fontColor=#ffffff;strokeColor=none;labelBorderColor=none;" vertex="1" parent="1">
+          <mxGeometry x="365" y="600" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UATdeYgYkaC6HxrNzLWi-15" value="&lt;font color=&quot;#45b2e8&quot;&gt;Tesla Web Application&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="10" y="210" width="140" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

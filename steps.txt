@@ -10,7 +10,7 @@ deactivate
 
 pkill -f gunicorn
 
-====================================== pip commands ======================================
+====================================== pip commands ===============================================
 pip freeze > requirements.txt
 pip install -r requirements.txt
 

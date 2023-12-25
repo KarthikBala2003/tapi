@@ -1,6 +1,7 @@
 sudo apt install python3.12-venv
 python3 -m venv /env/tapi
-source  ~/env/tapi/bin/activate
+source  ~/env/tapi/bin/activate 
+Windows --> source /env/tapi/Scripts/activate
 pip install flask
 pip install unicorn
 
@@ -30,6 +31,8 @@ sudo gunicorn --bind 0.0.0.0:8282 wsgi:app
 ~/.profile
 export PATH="/var/packages/python311/target/lib/python3.11/site-packages:$PATH"
 
-
-
+#============= Run on Windows ==================
+If you're using Windows, you can use Waitress as an alternative to Gunicorn.
+waitress-serve --listen=127.0.0.1:8282 wsgi:app
+waitress-serve --listen=localhost:8282 wsgi:app
 

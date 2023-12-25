@@ -24,4 +24,12 @@ cd tapi
 sudo chmod -R 775 bin
 source  bin/activate
 
+sudo gunicorn --bind 0.0.0.0:8282 wsgi:app
+
+#=================== gunicorn execution path added =====================
+~/.profile
+export PATH="/var/packages/python311/target/lib/python3.11/site-packages:$PATH"
+
+
+
 

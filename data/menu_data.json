@@ -1,0 +1,20 @@
+{
+    "vehicles": [
+        "get_vehicles"
+    ],
+    "vehicle_data": [
+        "get_state",
+        "get_location",
+        "get_weather",
+        "get_map"
+    ],
+    "drives": [
+        "get_drives",
+        "get_driving_path",
+        "set_tag"
+    ],
+    "charges": [
+        "get_charges",
+        "set_charge_cost"
+    ]
+}

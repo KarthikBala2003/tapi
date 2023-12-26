@@ -16,6 +16,9 @@ pip install -r requirements.txt
 
 pip freeze > requirements.txt && awk -F'==' '{print $1}' requirements.txt > requirements_noversions.txt
 
+#=========================== git commands ========================================
+ git pull origin dev --allow-unrelated-histories
+
 ====================================== NAS Drive Setup commands ======================================
 cd /volume1
 sudo python3.11 -m venv tapi

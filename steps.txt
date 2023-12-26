@@ -4,7 +4,7 @@ source  ~/env/tapi/bin/activate
 pip install flask
 pip install unicorn
 
-gunicorn --bind 0.0.0.0:8282 wsgi:app
+gunicorn --bind 0.0.0.0:8282 tapi_wsgi:app
 
 deactivate
 

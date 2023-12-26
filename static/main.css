@@ -1,4 +1,5 @@
 * {
+<<<<<<< HEAD
     box-sizing: border-box;
 }
 
@@ -113,4 +114,109 @@ body {
 .fa-caret-down {
     float: right;
     padding-right: 8px;
+=======
+    font-family: "Calibri";
+    color: rgb(45, 34, 37);
+
+}
+
+p,
+a {
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul li {
+    display: block;
+    position: relative;
+    float: left;
+}
+
+a {
+    display: block;
+    transition: all linear 0.2s;
+    padding: 7px 15px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #c6b9b9;
+    background-color: #2f3133;
+    font-size: 18px;
+}
+
+a:hover {
+    background-color: #14171a;
+}
+
+ul ul {
+    display: none;
+    position: absolute;
+}
+
+ul li:hover>ul {
+    display: inherit;
+}
+
+ul ul li {
+    width: 200px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+ul ul ul {
+    position: relative;
+    top: -36px;
+    left: 200px;
+    float: right;
+}
+
+.header-container {
+    background-color: rgb(154, 129, 120)
+ 
+    color: #ffffff;
+
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   
+}
+
+.header-container h2 {
+    font-size: 2em;
+    margin-bottom: 0px;
+}
+
+.header-container p {
+    font-size: 1.2em;
+    margin-bottom: 0;
+}
+
+
+.header-container::after {
+    content: '';
+    display: block;
+    height: 4px;
+    background-color: #ffffff;
+
+    margin-top: 10px;
+}
+body {
+    background-color: #f0ddfb;
+   
+    color: #ffffff;
+
+}
+.navbar {
+    background-color: #666666;
+    
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0px;
+>>>>>>> 597ff7c12305622436d0bb3879bede87afeb228d
 }

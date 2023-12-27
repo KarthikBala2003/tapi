@@ -1,20 +1,24 @@
 {
     "vehicles": [
-        "get_vehicles"
+        "get vehicles"
     ],
-    "vehicle_data": [
-        "get_state",
-        "get_location",
-        "get_weather",
-        "get_map"
+    "vehicledata": [
+        "get state",
+        "get location",
+        "get weather",
+        "get map"
     ],
     "drives": [
-        "get_drives",
-        "get_driving_path",
-        "set_tag"
+        "get drives",
+        "get driving path",
+        "set tag"
     ],
     "charges": [
-        "get_charges",
-        "set_charge_cost"
+        "get charges",
+        "set charge cost"
+    ],
+    "random": [
+        "randomvalue1",
+        "randomvalue2"
     ]
 }

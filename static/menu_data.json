@@ -1,0 +1,24 @@
+{
+    "vehicles": [
+        "get vehicles"
+    ],
+    "vehicledata": [
+        "get state",
+        "get location",
+        "get weather",
+        "get map"
+    ],
+    "drives": [
+        "get drives",
+        "get driving path",
+        "set tag"
+    ],
+    "charges": [
+        "get charges",
+        "set charge cost"
+    ],
+    "random": [
+        "randomvalue1",
+        "randomvalue2"
+    ]
+}

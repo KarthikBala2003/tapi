@@ -5,7 +5,7 @@ Windows --> source /env/tapi/Scripts/activate
 pip install flask
 pip install unicorn
 
-gunicorn --bind 0.0.0.0:8282 wsgi:app
+gunicorn --bind 0.0.0.0:8282 tapi_wsgi:app
 
 deactivate
 
@@ -16,6 +16,9 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 
 pip freeze > requirements.txt && awk -F'==' '{print $1}' requirements.txt > requirements_noversions.txt
+
+#=========================== git commands ========================================
+ git pull origin dev --allow-unrelated-histories
 
 ====================================== NAS Drive Setup commands ======================================
 cd /volume1

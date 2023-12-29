@@ -97,7 +97,7 @@ if [[ $OPERATION == $DCRY  ]]; then
     echo
     
     FILE_NAME=${user_name}
-    #     openssl_decrypt $ENCRYPT_TYPE $SHA $ITER $FILE_NAME $user_pwd
+    # openssl_decrypt $ENCRYPT_TYPE $SHA $ITER $FILE_NAME $user_pwd
     openssl_get_decrypt $ENCRYPT_TYPE $SHA $ITER $FILE_NAME $user_pwd
     
     echo "Encrypted password is: $PASSKEY"

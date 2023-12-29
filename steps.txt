@@ -28,7 +28,7 @@ cd tapi
 sudo chmod -R 775 bin
 source  bin/activate
 
-sudo gunicorn --bind 0.0.0.0:8282 wsgi:app
+sudo gunicorn --bind 0.0.0.0:8282 tapi_wsgi:app
 
 #=================== gunicorn execution path added =====================
 ~/.profile
@@ -36,6 +36,8 @@ export PATH="/var/packages/python311/target/lib/python3.11/site-packages:$PATH"
 
 #============= Run on Windows ==================
 If you're using Windows, you can use Waitress as an alternative to Gunicorn.
-waitress-serve --listen=127.0.0.1:8282 wsgi:app
-waitress-serve --listen=localhost:8282 wsgi:app
+waitress-serve --listen=127.0.0.1:8282 tapi_wsgi:app
+waitress-serve --listen=localhost:8282 tapi_wsgi:app
 
+#======= Windows to Unix carriage return Encoding issue =====
+sed -i 's/\r//' xxxx.sh 

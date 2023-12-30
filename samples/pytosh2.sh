@@ -7,13 +7,18 @@ ITER=310000
 SHA=sha256
 FILE_NAME=''
 ENCRYPT_TYPE=aes-128-cbc
+
 OPERATION="Decrypt"
+
+# OPERATION='Encrypt'
+
 ECRY="Encrypt"
 DCRY="Decrypt"
 PASSKEY=''
 USER_EXISTS=0
 user_name=$1
 user_pwd=$2
+OPERATION=$3
 
 # Check the user exists
 is_user_exists() {

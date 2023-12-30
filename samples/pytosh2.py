@@ -15,9 +15,15 @@ def execute_bash_script(script_path, *args):
 script_path = 'pytosh2.sh'
 input_param1 = 'hello'
 input_param2 = 'world'
+
 #input_param3 = 'Encrypt'
+
+# 'Encrypt' 'Decrypt'
+input_param3 =  'Decrypt'       
+
+
 try:
-    output = execute_bash_script(script_path, input_param1, input_param2)
+    output = execute_bash_script(script_path, input_param1, input_param2, input_param3)
     print(output)
 except Exception as e:
     print(f'Error: {str(e)}')

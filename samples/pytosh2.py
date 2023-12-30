@@ -19,7 +19,7 @@ input_param2 = 'world'
 #input_param3 = 'Encrypt'
 
 # 'Encrypt' 'Decrypt'
-input_param3 =  'Decrypt'       
+input_param3 =  'Encrypt'       
 
 
 try:

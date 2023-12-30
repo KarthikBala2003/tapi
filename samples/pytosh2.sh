@@ -8,9 +8,9 @@ SHA=sha256
 FILE_NAME=''
 ENCRYPT_TYPE=aes-128-cbc
 
-OPERATION="Decrypt"
+#OPERATION="Decrypt"
 
-# OPERATION='Encrypt'
+OPERATION='Encrypt'
 
 ECRY="Encrypt"
 DCRY="Decrypt"

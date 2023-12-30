@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
-    <title>SelectedFeature</title>
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">-->
+    <title>{{ item }}</title>
 </head>
-
 
 <body>
     <div class="container">
@@ -16,16 +15,15 @@
     <div class="d-flex flex-column justify-content-center w-100 h-100">
 
         <div class="d-flex flex-column justify-content-center align-items-center">
-            <h1 class="fw-light text-white m-0"> </h1>
-            <div class="btn-group my-5">
+            <h1 class="fw-light text-white m-0">{{ item }}</h1>
+            <!--<div class="btn-group my-5">
                 <a href="#" class="btn btn-outline-light" aria-current="page"><i class="fas fa-file-download me-2"></i>
                 </a>
                 <a href="#" class="btn btn-outline-light"><i class="fas fa-expand ms-2"></i></a>
-            </div>
-            <a href="#" class="text-decoration-none">
-                <h5 class="fw-light text-white m-0"></h5>
-            </a>
+            </div>-->
+            <p class="fw-light text-white m-0">{{ item }}</p>
         </div>
     </div>
-    </div>
 </body>
+
+</html>

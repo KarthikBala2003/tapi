@@ -15,7 +15,7 @@ def execute_bash_script(script_path, *args):
 script_path = 'pytosh2.sh'
 input_param1 = 'hello'
 input_param2 = 'world'
-
+#input_param3 = 'Encrypt'
 try:
     output = execute_bash_script(script_path, input_param1, input_param2)
     print(output)

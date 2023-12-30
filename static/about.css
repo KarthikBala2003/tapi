@@ -1,0 +1,55 @@
+body {
+    background: linear-gradient(-45deg, #808080, #373737, #594D5B, #322D31);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: "verdana", sans-serif;
+    box-sizing: border-box;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: "verdana", sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 500px;
+    width: 900px;
+    margin: 20px auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    background: rgb(155, 198, 53);
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, rgb(25, 17, 20) 0%, #070903 99%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgb(6, 8, 2) 0%, rgb(24, 26, 20) 99%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, rgb(8, 10, 1) 0%, rgb(18, 20, 15) 99%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9bc635', endColorstr='#c0ea67', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}

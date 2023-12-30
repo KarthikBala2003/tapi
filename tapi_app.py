@@ -19,5 +19,12 @@ def index():
 def get_menu_data():
     return jsonify(menu_data)
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+@app.route('/reference/<item>')
+def reference(item):
+    return render_template('reference_template.html', item=item)
+
 if __name__ == '__main__':
     app.run(debug=True)

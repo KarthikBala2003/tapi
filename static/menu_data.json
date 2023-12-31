@@ -17,6 +17,10 @@
         "get charges",
         "set charge cost"
     ],
+    "Status": [
+        "get status"
+        
+    ],
     "random": [
         "random value1",
         "random value2"

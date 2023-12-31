@@ -1,41 +1,30 @@
-from flask import Flask, render_template, request, redirect, url_for
-import subprocess
 import os
 import json
+from flask import Flask, render_template, jsonify
 
-app = Flask(__name__, template_folder='templates', static_folder='static')
+app = Flask(__name__)
 
+# Get the path to the JSON file within the 'data' folder
+json_file_path = os.path.join(os.path.dirname(__file__), 'data', 'menu_data.json')
 
-samples_path = os.path.join(os.path.dirname(__file__), 'samples')
+# Load the JSON data
+with open(json_file_path) as f:
+    menu_data = json.load(f)
 
 @app.route('/')
-def home():
-    return render_template('login.html')
-
-@app.route('/login', methods=['POST'])
-def login():
-    username = request.form.get('username')
-    password = request.form.get('password')
-
-    
-    user_enc_file = os.path.join(samples_path, f"{username}.enc")
-
-    if os.path.exists(user_enc_file):
-        
-        pytosh2_path = os.path.join(samples_path, 'pytosh2.py')
-        result = subprocess.run(['python3', pytosh2_path], capture_output=True, text=True, cwd=samples_path)
-
-        if "Encrypted password is:" in result.stdout:
-            return redirect(url_for('index', output=result.stdout))
-        else:
-            return "Access Denied"
-    else:
-        return "User not found"
-
-@app.route('/index')
 def index():
-    output = request.args.get('output', '')
-    return render_template('index.html')
+    return render_template('index.html', menu_data=menu_data)
+
+@app.route('/menu_data')
+def get_menu_data():
+    return jsonify(menu_data)
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+@app.route('/reference/<item>')
+def reference(item):
+    return render_template('reference_template.html', item=item)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -4,26 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">-->
-    <title>{{ item }}</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Tesla API Dashboard</title>
+
 </head>
 
 <body>
-    <div class="container">
+
+    <header class="maintitle">
+        <h1>Tesla API</h1>
+    </header>
+
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Admin</a>
+        <a class="right" href="/about">About</a>
+    </nav>
+
+    <div class="sidebar">
+        <ul id="menuList"></ul>
     </div>
 
-    <div class="d-flex flex-column justify-content-center w-100 h-100">
-
-        <div class="d-flex flex-column justify-content-center align-items-center">
-            <h1 class="fw-light text-white m-0">{{ item }}</h1>
-            <!--<div class="btn-group my-5">
-                <a href="#" class="btn btn-outline-light" aria-current="page"><i class="fas fa-file-download me-2"></i>
-                </a>
-                <a href="#" class="btn btn-outline-light"><i class="fas fa-expand ms-2"></i></a>
-            </div>-->
-            <p class="fw-light text-white m-0">{{ item }}</p>
-        </div>
+    <div class="content">
+                <p class="fw-light text-white m-0">{{ item }}</p>
     </div>
+
+    <div class="footer">
+
+    </div>
+    <div class="realfooter" id="pageFooter">
+        <!-- Content for column3 goes here -->
+        Copyright @TeslaApi
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
 </html>

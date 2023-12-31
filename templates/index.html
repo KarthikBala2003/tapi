@@ -10,15 +10,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <title>Tesla API Dashboard</title>
+        
 </head>
 
-<body style="background-image: url('/static/charcoal.jpg');">
+<body>
 
-    <header>
+    <header class="maintitle">
         <h1>Tesla API</h1>
     </header>
 
-    <nav>
+    <nav class="navbar">
         <a href="#">Home</a>
         <a href="#">Admin</a>
         <a class="right" href="/about">About</a>
@@ -26,6 +27,18 @@
 
     <div class="sidebar">
         <ul id="menuList"></ul>
+    </div>
+
+    <div class="content">
+        <!-- Content for column2 goes here -->
+    </div>
+
+    <div class="footer">
+        <!-- Content for column3 goes here -->
+    </div>
+    <div class="realfooter" id="pageFooter">
+        <!-- Content for column3 goes here -->
+        Copyright @TeslaApi
     </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>

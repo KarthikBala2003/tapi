@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
             .replace(/^(.)/, (match, group1) => group1.toUpperCase());
     }
 
+document.getElementById('redirectButton').addEventListener('click', function () {
+    window.location.href = '/';
+});
+
     const jsonDataFile = "/static/menu_data.json";
     const menuList = document.getElementById("menuList");
 

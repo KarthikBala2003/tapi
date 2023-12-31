@@ -96,7 +96,7 @@ nav a:hover {
 }
 .submenu {
     display: none;
-    background-color: #555;
+    background-color: black;
     padding-left: 20px;
     position: absolute;
     top: 0;
@@ -106,6 +106,7 @@ nav a:hover {
 }
 .sidebar li:hover .submenu {
     display: block;
+    
 }
 
 .realfooter {
@@ -120,7 +121,28 @@ nav a:hover {
     transition: opacity 0.5s ease;
         
     opacity: 0;
+    clear: both;
+        
+    margin-top: 20px;
         
 
 }
 
+#redirectButton {
+    background-color: grey;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 290px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+#redirectButton:hover {
+    background-color: black;
+
+}

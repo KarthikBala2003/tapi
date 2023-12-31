@@ -29,7 +29,8 @@ def login():
         print("Terminal Output:", result.stdout)
 
         if "password" in result.stdout:
-            return redirect(url_for('index', output=result.stdout))
+            # return redirect(url_for('index', output=result.stdout))
+            return redirect(url_for('index'))
         else:
             return "Access Denied"
     else:

@@ -39,13 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var isFooterVisible = false;
 
     window.addEventListener("scroll", function () {
-        // Check if user has scrolled to the bottom
+        
         var isBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight;
 
-        // Check if user has scrolled to the top
+        
         var isTop = window.scrollY === 0;
 
-        // Toggle footer visibility based on scroll position
+        
         if (isBottom && !isFooterVisible) {
             footer.style.opacity = 1;
             isFooterVisible = true;

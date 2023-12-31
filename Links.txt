@@ -1,0 +1,29 @@
+Top 5 Most Used Architecture Patterns
+https://youtu.be/f6zXyq4VPP8?si=iHVCBpIo-Sa5b71k
+
+Insomnia Tutorial: API Design, Testing and Collaboration
+https://www.youtube.com/watch?v=fzLPHpOP3Wc
+
+What is a REST API?
+https://www.youtube.com/watch?v=lsMQRaeKNDk
+
+Python Logging - Tutorial
+https://www.youtube.com/watch?v=urrfJgHwIJA
+
+Python Object Oriented Programming (OOP) - For Beginners
+https://www.youtube.com/watch?v=JeznW_7DlB0
+
+Python OOP Tutorial 1: Classes and Instances
+https://youtu.be/ZDa-Z5JzLYM?si=rcJsIqT_Ar0fqApn
+
+Intro to Flask-Admin
+https://www.youtube.com/watch?v=G1FBSYJ45Ww
+
+How to Integrate Flask-Admin and Flask-Login
+https://youtu.be/NYWEf9bZhHQ?si=au1aq4u8iSm0LNU8
+
+MVC Explained in 4 Minutes
+https://www.youtube.com/watch?v=DUg2SWWK18I
+
+
+

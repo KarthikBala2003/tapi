@@ -1,4 +1,4 @@
-class CommonLib:
+class CommonProp:
     
     """ ******************** setter getter for inbound folder and file ******************** """
     
@@ -14,9 +14,9 @@ class CommonLib:
     def get_inbound_file(self):
         return self.__inbound_file_name
     
-    def set_api_key(self,aws_key):
-        self.__aws_key = aws_key
+    def set_api_key(self,api_key):
+        self.__api_key = api_key
 
     def get_api_key(self):
-        return self.__aws_key
+        return self.__api_key
     

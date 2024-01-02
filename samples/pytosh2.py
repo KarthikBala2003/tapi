@@ -1,4 +1,5 @@
 import subprocess
+import sys
 
 def execute_bash_script(script_path, *args):
     command = ['bash', script_path] + list(args)
@@ -13,14 +14,15 @@ def execute_bash_script(script_path, *args):
 
 # Example usage
 script_path = 'pytosh2.sh'
-input_param1 = 'hello'
-input_param2 = 'world'
 
-#input_param3 = 'Encrypt'
 
-# 'Encrypt' 'Decrypt'
-input_param3 =  'Encrypt'       
+if len(sys.argv) != 4:
+    print('Usage: python script.py input_param1 input_param2 input_param3')
+    sys.exit(1)
 
+input_param1 = sys.argv[1]
+input_param2 = sys.argv[2]
+input_param3 = sys.argv[3]
 
 try:
     output = execute_bash_script(script_path, input_param1, input_param2, input_param3)

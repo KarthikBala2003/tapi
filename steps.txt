@@ -29,6 +29,7 @@ sudo chmod -R 775 bin
 source  bin/activate
 
 sudo gunicorn --bind 0.0.0.0:8282 tapi_wsgi:app
+sudo systemctl list-unit-files | grep gunicorn
 
 #=================== gunicorn execution path added =====================
 ~/.profile

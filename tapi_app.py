@@ -5,10 +5,7 @@ import os
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 
-samples_path = os.path.join(os.path.dirname(__file__), 'samples')
-
-print("Samples Path:", samples_path)
-
+src_path = os.path.join(os.path.dirname(__file__), 'src')
 
 authenticated_user = False
 
@@ -32,17 +29,15 @@ def login():
     username = request.form.get('username')
     password = request.form.get('password')
 
-    user_enc_file = os.path.join(samples_path, f"{username}.enc")
-
-    print("User Enc File:", user_enc_file)
+    user_enc_file = os.path.join(src_path, f"{username}.enc")
 
     if os.path.exists(user_enc_file):
-        pytosh2_path = os.path.join(samples_path, 'pytosh2.py')
+        pytosh2_path = os.path.join(src_path, 'tapi_encry_decry.py')
         
         
         input_param3 = 'Encrypt'
         
-        result = subprocess.run(['python', pytosh2_path, username, password, input_param3], capture_output=True, text=True, cwd=samples_path)
+        result = subprocess.run(['python', pytosh2_path, username, password, input_param3], capture_output=True, text=True, cwd=src_path)
 
         print("Terminal Output:", result.stdout)
 

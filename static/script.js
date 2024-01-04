@@ -59,3 +59,7 @@ document.getElementById('redirectButton').addEventListener('click', function () 
         }
     });
 });
+window.addEventListener('beforeunload', function (event) {
+    // Notify the server when the tab or browser is closed
+    fetch('/logout', { method: 'POST' });
+});

@@ -32,6 +32,8 @@ sudo gunicorn --bind 0.0.0.0:8282 tapi_wsgi:app
 sudo systemctl list-unit-files | grep gunicorn
 sudo find / -type l -ls 2>&1 | grep gunicorn
 
+sed -i 's/python3/python3.11/g' tapi_app.py
+
 #=================== gunicorn execution path added =====================
 ~/.profile
 export PATH="/var/packages/python311/target/lib/python3.11/site-packages:$PATH"

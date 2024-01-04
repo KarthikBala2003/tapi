@@ -46,6 +46,13 @@
         </div>
 
     </div>
+    <script>
+        window.addEventListener('beforeunload', function (e) {
+            e.preventDefault();
+            navigator.sendBeacon('/terminate_session', '');
+        });
+    </script>
+
 </body>
 
 </html>

@@ -1,20 +1,34 @@
 from functools import wraps
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 import subprocess
 import os
+from datetime import timedelta
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
-app.secret_key = 'abcd1234efg789hijk456' #will be made dynamic later 
+app.secret_key = 'abcd1234efg789hijk456'
+app.permanent_session_lifetime = timedelta(minutes=5)  
 
 src_path = os.path.join(os.path.dirname(__file__), 'src')
 
 def authentication_required(route_function):
     @wraps(route_function)
     def wrapper(*args, **kwargs):
-        if 'authenticated_user' not in session and request.endpoint not in ['home', 'login']:
+        allowed_endpoints = ['home', 'login', 'reference']
+        current_endpoint = request.url_rule.endpoint if request.url_rule else None
+
+        if current_endpoint not in allowed_endpoints and ('authenticated_user' not in session or session.permanent is False):
             return redirect(url_for('home'))
+
+        if current_endpoint in ['reference', 'index'] and not request.referrer:
+            return redirect(url_for('home'))
+
         return route_function(*args, **kwargs)
     return wrapper
+
+@app.route('/terminate_session', methods=['POST'])
+def terminate_session():
+    session.pop('authenticated_user', None)
+    return jsonify({'status': 'success'})
 
 @app.route('/')
 def home():
@@ -40,6 +54,7 @@ def login():
             expected_password = result.stdout[encrypted_password_index + len("Encrypted password is: "):].strip()
 
             if password == expected_password:
+                session.permanent = True
                 session['authenticated_user'] = True
                 return redirect(url_for('index'))
             else:
@@ -52,8 +67,6 @@ def login():
 @app.route('/index')
 @authentication_required
 def index():
-    if request.method != 'GET':
-        return redirect(url_for('home'))
     output = request.args.get('output', '')
     return render_template('index.html', output=output)
 
@@ -65,9 +78,8 @@ def about():
 @app.route('/reference/<item>')
 @authentication_required
 def reference(item):
-    if request.method != 'GET':
-        return redirect(url_for('home'))
     return render_template('reference_template.html', item=item)
+
 @app.route('/logout', methods=['POST'])
 def logout():
     session.pop('authenticated_user', None)
